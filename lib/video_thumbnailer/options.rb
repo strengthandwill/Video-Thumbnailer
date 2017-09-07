@@ -29,6 +29,10 @@ module VideoThumbnailer
       end
     end
 
+    def scale value
+      %Q{"-vf scale=#{value}"}
+    end
+
     def rotate value
       case value
       when 90  then %Q(-vf transpose=1)
